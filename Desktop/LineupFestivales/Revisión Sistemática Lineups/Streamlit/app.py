@@ -18,7 +18,8 @@ opciones = [
     "2. Metodología PRISMA", 
     "3. Estado del Arte", 
     "4. Resultados y Visualizaciones", 
-    "5. Discusión y Conclusiones"
+    "5. Discusión y Conclusiones",
+    "6. Material Suplementario"
 ]
 pagina = st.sidebar.radio("Seleccione una sección:", opciones)
 
@@ -270,4 +271,24 @@ elif pagina == "5. Discusión y Conclusiones":
         5. Ojeda Medina, J. J. (2024). *La contratación musical en la era digital: análisis comparado y desafíos para Chile.* Universidad de Chile.
         6. Page, M. J., et al. (2021). The PRISMA 2020 statement. *BMJ*, 372(n71).
         7. Quan, F., et al. (2025). Research on improving the competitiveness of live music venues based on hybrid probabilistic information... *Entertainment Computing*, 52.
+        """)
+
+# --- PÁGINA 6: MATERIAL SUPLEMENTARIO ---
+elif pagina == "6. Material Suplementario":
+    st.title("Material Suplementario y Transparencia")
+    
+    st.write("""
+    En cumplimiento con los estándares de **Ciencia Abierta**, se pone a disposición el material técnico, 
+    bases de datos bibliográficas y scripts de preprocesamiento utilizados en esta revisión sistemática.
+    """)
+
+    st.markdown("---")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.subheader("Repositorio de Código")
+        st.info("Acceda al repositorio oficial en GitHub para revisar los notebooks y datos.")
+        # Reemplaza con tu enlace de GitHub
+        st.link_button("Ir al Repositorio GitHub", "https://github.com/cperezfl/complementario-lineups")
         """)
